@@ -1,27 +1,10 @@
 <template>
-    <div class="modal-backdrop">
-        <div class="modal">
-            <header class="modal-header">
-                <slot name="header">
-                    Registro Exitoso!
-                    <button type="button" class="btn-close" @click="close">x</button>
-                </slot>
-            </header>
-            <section class="modal-body">
-                <slot name="body">
-                    Se ha registrado su artículo exitosamente!
-                </slot>
-            </section>
-            <footer class="modal-footer">
-                <slot name="footer">
-
-                    <button type="button" class="btn-green" @click="close">
-                        Cerrar
-                    </button>
-                </slot>
-            </footer>
+    <modal name="formSuccess" transition="pop-out" width="modalWidth" :height="400">
+        <div class="box">
+            <div class="box-part"></div>
         </div>
-    </div>
+        <v-dialog/>
+    </modal>
 </template>
 
 <script>
