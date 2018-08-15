@@ -13,5 +13,5 @@ Small challenge project made with Vue and Vuex. The goal of this project was to 
 * ~~Make the design better in some aspects~~
 * ~~Add styles to some of the default inputs~~
 
-## Future Plans:
+## Ideas:
 * Redesign into a step by step form instead of dynamic updating everything at once
