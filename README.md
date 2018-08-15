@@ -9,5 +9,9 @@ Small challenge project made with Vue and Vuex. The goal of this project was to 
 
 ## To Do:
 * Refactor into smaller components instead of having everything in one thing
-* Make the design better in some aspects
-* Add styles to some of the default inputs
+* Try to implement Modal success message after form submit
+* ~~Make the design better in some aspects~~
+* ~~Add styles to some of the default inputs~~
+
+## Future Plans:
+* Redesign into a step by step form instead of dynamic updating everything at once
