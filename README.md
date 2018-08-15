@@ -10,6 +10,7 @@ Small challenge project made with Vue and Vuex. The goal of this project was to 
 ## To Do:
 * Refactor into smaller components instead of having everything in one thing
 * Try to implement Modal success message after form submit
+* Fix the responsive design for certain sizes of screens and the card height.
 * ~~Make the design better in some aspects~~
 * ~~Add styles to some of the default inputs~~
 
