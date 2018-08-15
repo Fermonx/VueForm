@@ -20,6 +20,9 @@ Vue.component('form',form);
 
 new Vue({
   el: '#app',
+  data:{
+    showModal: false
+  },
   store,
   components: { App },
   template: '<App/>'

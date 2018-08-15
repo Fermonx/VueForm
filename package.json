@@ -1,8 +1,7 @@
 {
-  "name": "todos",
+  "name": "Form",
   "version": "1.0.0",
-  "description": "Todos app",
-  "author": "Juan <jupegarnica@gmail.com>",
+  "description": "Vue Form",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
