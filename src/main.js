@@ -15,10 +15,10 @@ Vue.use(VModal, {dialog: true});
 
 //Components
 
-import form from './components/mainForm'
+import mainForm from './components/mainForm'
 
 
-Vue.component('form',form);
+Vue.component('mainform',mainForm);
 
 new Vue({
   el: '#app',

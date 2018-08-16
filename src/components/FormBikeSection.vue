@@ -16,7 +16,7 @@
         <div>{{`${damageRange}: ${damageRateText}`}}</div>
         <input id="damageRate" type="range" min="0" max="4" step="1" v-model="damageRange">
         <div class="lineSpacing1em"></div>
-        <label for="fileUp">Seleccione Imágenes del producto (Min 1 - Máx 3):</label>
+        <label for="fileUp">Imágenes del producto (Min 1 - Máx 3):</label>
         <div class="uploadFileBtn">
             <input type="file" id="fileUp"  class="form-control" name="helmFile" multiple data-multiple-caption="" required/>
             <label for="fileUp"><span></span></label>

@@ -3,7 +3,7 @@ body {
     display: -moz-box;
     display: -ms-flexbox;
     background-image: url("../country-quilt.png");
-    color: #505561;
+    color: #2e313a;
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
@@ -12,6 +12,7 @@ h3{
     font-family: 'Josefin Sans', sans-serif;
 }
 
+/** Form: option radio styling */
 
 @keyframes click-wave {
     0% {
@@ -35,15 +36,15 @@ h3{
     height: 40px;
     width: 40px;
     transition: all 0.15s ease-out 0s;
-    background: #cbd1d8;
+    background: #9ca1a8;
     border: none;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     outline: none;
 
 }
 .option-input:hover {
-    background: #9faab7;
+    background: #79818e;
 }
 .option-input:checked {
     background: #17a2b8;
@@ -75,20 +76,7 @@ h3{
     border-radius: 50%;
 }
 
-.flex-container {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-.formItem {
+.formRadio {
     margin-top: 0.5em;
     color: #000000;
     font-weight: normal;
@@ -138,24 +126,29 @@ h3{
     height: 1em;
 }
 
-/**Iphone Screen sizes **/
+
 #formContainer {
     padding: 2em;
     top: 40%;
     margin-top: 6em;
-    margin-bottom: 2em;
+    margin-bottom: 6em;
     border-radius: 8px;
-    background: rgba(210, 210, 210, 0.64);
-    width: auto;
+    background: rgba(204, 201, 204, 0.6);
+    width: 25em;
+    -webkit-box-shadow: 4px 10px 53px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 10px 53px -13px rgba(0,0,0,0.75);
+    box-shadow: 4px 10px 53px -13px rgba(0,0,0,0.75);
 }
 
 
 select{
-    border: 0;
+    border: 4px;
     font: 18px Roboto;
-    padding: 5px;
+    padding: 2px;
     width: auto !important;
 }
+
+/** Range slider styling **/
 
 input[type=range] {
     -webkit-appearance: none;
@@ -243,12 +236,37 @@ input[type=range]:focus::-ms-fill-upper {
     background: #1bbed8;
 }
 
+
+/** File upload input styling */
+
 input[type=file]{
     height: 45px;
     padding: 7px;
 }
 
+/** Price warning styling when a users puts over a certain price */
+
 .priceWarn{
     font-size: 12px;
     color: #505561;
+    margin-bottom: 0;
 }
+
+.btnShadow {
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.1) inset;
+}
+
+
+/** To check the BS4 Grid
+
+
+div[class="row"] {
+    outline: 1px dotted rgba(0, 0, 0, 0.25);
+}
+
+div[class^="col-"] {
+    background-color: rgba(255, 0, 0, 0.2);
+    outline: 1px dotted rgba(0, 0, 0, 0.5);
+}
+
+ */
