@@ -8,7 +8,7 @@
             </div>
             <div class="lineSpacing"><hr></div>
             <div class="lineSpacing1em"></div>
-            <form>
+            <form action="https://getsimpleform.com/messages?form_api_token=6787504ffdec4365054fbc23ccf5eb16" method="post">
                 <label for="radioOpts">Seleccione su artículo: </label>
                 <div class="row formRadio" id="radioOpts">
                     <div class="col-6">
@@ -88,14 +88,15 @@
                 <div class="row">
                     <div class="col-12">
                         <div v-if="option !== ''">
-                            <button type="submit" class="btn btn-info offset-3 btnShadow" style="margin-top: 1em;" name="sendForm" onclick="show()">Registrar Artículo</button>
+                            <button type="submit" class="btn btn-info offset-3 btnShadow" style="margin-top: 1em;" name="sendForm" @click="showModal = !showModal">Registrar Artículo</button>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
 
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div v-model="showModal">
+            <div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -114,9 +115,16 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+
+
 
 
     </div>
+
+
+
 
 </template>
 
@@ -140,12 +148,13 @@
                 helmModel: '',
                 damageRange: '',
                 priceH: '',
-                priceB: ''
+                priceB: '',
+                showModal: false
             }
         },
         methods: {
             show(){
-                document.getElementById('#exampleModalCenter').modal('show');
+                this.$emit('formSent');
             }
         },
 

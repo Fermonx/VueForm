@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <mainForm/>
+     <mainForm/>
   </div>
 </template>
 

@@ -10,7 +10,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './assets/stylesheets/index.css'
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
-Vue.use(VModal, {dialog: true});
+Vue.use(VModal, {componentName: "vModal", dialog: true});
 
 
 //Components
@@ -23,7 +23,7 @@ Vue.component('mainform',mainForm);
 new Vue({
   el: '#app',
   data:{
-    showModal: false
+
   },
   store,
   components: { App },
