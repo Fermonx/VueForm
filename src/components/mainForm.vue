@@ -8,7 +8,7 @@
             </div>
             <div class="lineSpacing"><hr></div>
             <div class="lineSpacing1em"></div>
-            <form action="https://getsimpleform.com/messages?form_api_token=6787504ffdec4365054fbc23ccf5eb16" method="post">
+            <form>
                 <label for="radioOpts">Seleccione su artículo: </label>
                 <div class="row formRadio" id="radioOpts">
                     <div class="col-6">
@@ -88,38 +88,15 @@
                 <div class="row">
                     <div class="col-12">
                         <div v-if="option !== ''">
-                            <button type="submit" class="btn btn-info offset-3 btnShadow" style="margin-top: 1em;" name="sendForm" @click="showModal = !showModal">Registrar Artículo</button>
+                            <button type="submit" class="btn btn-info offset-3 btnShadow" style="margin-top: 1em;" name="sendForm" @click="show()">Registrar Artículo</button>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
 
-        <div v-model="showModal">
-            <div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
+        <!-- Form sent modal tag -->
+        <v-dialog/>
 
     </div>
 
@@ -148,13 +125,20 @@
                 helmModel: '',
                 damageRange: '',
                 priceH: '',
-                priceB: '',
-                showModal: false
+                priceB: ''
             }
         },
         methods: {
             show(){
-                this.$emit('formSent');
+                this.$modal.show('dialog', {
+                    title: 'Artículo registrado correctamente!',
+                    text: 'Se ha registrado su artículo',
+                    buttons: [
+                        {
+                            title: 'Cerrar'
+                        }
+                    ]
+                })
             }
         },
 

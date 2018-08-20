@@ -10,12 +10,13 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './assets/stylesheets/index.css'
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
-Vue.use(VModal, {componentName: "vModal", dialog: true});
+Vue.use(VModal,{dialog: true});
 
 
 //Components
 
 import mainForm from './components/mainForm'
+
 
 
 Vue.component('mainform',mainForm);
